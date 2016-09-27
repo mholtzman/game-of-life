@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Conway's Game of Life Demo</title>
+
+    <style type="text/css">
+        #grid {
+            border-spacing: 0px;
+            padding: 30px;
+        }
+
+        #grid td {
+            height: 12px;
+            width: 12px;
+            border: solid 1px #ccc;
+            padding: 0px 0px 0px 0px;
+            display: inline-block;
+            border-collapse: separate;
+        }
+
+        #grid td.filled {
+            background-color: green;
+        }
+    </style>
+
+    <script type="text/javascript" src="cellular-automata.js"></script>
+</head>
+<body>
+    <div>
+        <label for="period">Period time (in ms): </label>
+        <input id="period" type="number" placeholder="250">
+
+        <label for="pattern">Pattern: </label>
+        <select id="pattern"></select>
+
+        <button onclick="cells.start(document.getElementById('pattern').value, document.getElementById('period').value || 250)">Start</button> 
+        <button onclick="cells.stop()">Stop</button>
+    </div>
+
+    <table id="grid"></table>
+</body>
+</html>
