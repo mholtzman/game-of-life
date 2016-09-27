@@ -81,7 +81,6 @@
     const initBoard = function(pattern) {
         clearBoard();
 
-        let boardSize = [...Array(pattern.size).keys()];
         let grid = gridElement();
 
         for (let rowIndex = 0; rowIndex < pattern.height; rowIndex++) {
@@ -90,7 +89,7 @@
 
             for (let colIndex = 0; colIndex < pattern.width; colIndex++) {
                 board[rowIndex][colIndex] = false;
-                let cell = row.appendChild(document.createElement("td"));
+                row.appendChild(document.createElement("td"));
             }
         }
 
