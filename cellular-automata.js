@@ -126,6 +126,10 @@
         [14,4], [14,5], [14,6], [14,10], [14,11], [14,12]
     ];
 
+    const gliderCells = [
+        [0,1], [1,2], [2,0], [2,1], [2,2]
+    ];
+
     const gliderGunCells = [
         [5,1],[6,1],[5,2],[6,2],[5,11],[6,11],[7,11],[4,12],[8,12],[3,13],[9,13],
         [3,14],[9,14],[6,15],[4,16],[8,16],[5,17],[6,17],[7,17],[6,18],[3,21],[4,21],
@@ -137,6 +141,7 @@
     const patterns = {
         blinker: squarePattern('Blinker', 5, blinkerCells),
         pulsar: squarePattern('Pulsar', 17, pulsarCells),
+        glider: squarePattern('Glider', 50, gliderCells),
         gliderGun: rectPattern('Gosper\'s Glider Gun', 32, 45, gliderGunCells)
     };
 
